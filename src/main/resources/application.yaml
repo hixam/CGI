@@ -1,3 +1,28 @@
 spring:
   application:
     name: store
+
+  # Redis para cache
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+  # Configuración de H2 como base de datos
+  datasource:
+    url: jdbc:h2:mem:storedb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+
+  # Consola H2 (opcional, útil para ver los datos en desarrollo)
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true

@@ -1,0 +1,7 @@
+FROM redis:7-alpine
+
+# Puerto expuesto (por defecto Redis usa 6379)
+EXPOSE 6379
+
+# Comando por defecto: Redis en modo standalone
+CMD ["redis-server"]
