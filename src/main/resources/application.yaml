@@ -2,12 +2,6 @@ spring:
   application:
     name: store
 
-  # Redis para cache
-  data:
-    redis:
-      host: localhost
-      port: 6379
-
   # Configuración de H2 como base de datos
   datasource:
     url: jdbc:h2:mem:storedb

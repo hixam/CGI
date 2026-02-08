@@ -1,4 +1,5 @@
-package com.cgi.store.dto;
+package com.cgi.store.exceptions;
+
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -6,11 +7,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
-@Builder
-public class GlassesDto {
-    private Long id;
-    private String brandName;
-    private String price;
+public class ErrorResponse {
+
+    private int status;
+    private String error;
+    private String message;
 }

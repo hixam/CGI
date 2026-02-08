@@ -1,4 +1,6 @@
-package com.cgi.store.dto;
+package com.cgi.store.dto.response;
+
+import java.math.BigDecimal;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,8 +11,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class FinsDto {
+public class FinsDtoResponse {
     private Long id;
     private String brandName;
-    private String price;
+    private BigDecimal price;
 }
