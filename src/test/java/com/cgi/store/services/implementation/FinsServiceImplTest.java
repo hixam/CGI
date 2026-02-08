@@ -63,9 +63,9 @@ class FinsServiceImplTest {
             List<FinsDtoResponse> result = finsService.getAllFins();
 
             assertThat(result).hasSize(1);
-            assertThat(result.get(0).getId()).isEqualTo(EXISTING_ID);
-            assertThat(result.get(0).getBrandName()).isEqualTo(BRAND_NAME_TEST);
-            assertThat(result.get(0).getPrice()).isEqualByComparingTo(PRICE_TEN);
+            assertThat(result.getFirst().getId()).isEqualTo(EXISTING_ID);
+            assertThat(result.getFirst().getBrandName()).isEqualTo(BRAND_NAME_TEST);
+            assertThat(result.getFirst().getPrice()).isEqualByComparingTo(PRICE_TEN);
         }
     }
 

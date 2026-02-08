@@ -33,8 +33,8 @@ public class FinsController {
 
     @Operation(summary = "Get all fins")
     @ApiResponses({
-        @ApiResponse(responseCode = "200", description = "Successfully retrieved all fins"),
-        @ApiResponse(responseCode = "500", description = "Internal server error (ErrorResponse: error, message)")
+            @ApiResponse(responseCode = "200", description = "Successfully retrieved all fins"),
+            @ApiResponse(responseCode = "500", description = "Internal server error (ErrorResponse: error, message)")
     })
     @GetMapping("/fins")
     public ResponseEntity<List<FinsDtoResponse>> getAllFins() {
@@ -44,9 +44,9 @@ public class FinsController {
 
     @Operation(summary = "Create a new fin")
     @ApiResponses({
-        @ApiResponse(responseCode = "200", description = "Successfully created a new fin"),
-        @ApiResponse(responseCode = "400", description = "Bad request - validation failed (ErrorResponse: error, message)"),
-        @ApiResponse(responseCode = "500", description = "Internal server error (ErrorResponse: error, message)")
+            @ApiResponse(responseCode = "200", description = "Successfully created a new fin"),
+            @ApiResponse(responseCode = "400", description = "Bad request - validation failed (ErrorResponse: error, message)"),
+            @ApiResponse(responseCode = "500", description = "Internal server error (ErrorResponse: error, message)")
     })
     @PostMapping("/fins")
     public ResponseEntity<FinsDtoResponse> createFins(@RequestBody @Valid FinsDtoRequest finsDto) {
@@ -55,9 +55,9 @@ public class FinsController {
 
     @Operation(summary = "Get a fin by id")
     @ApiResponses({
-        @ApiResponse(responseCode = "200", description = "Successfully retrieved a fin by id"),
-        @ApiResponse(responseCode = "404", description = "Not found - fin does not exist (ErrorResponse: error, message)"),
-        @ApiResponse(responseCode = "500", description = "Internal server error (ErrorResponse: error, message)")
+            @ApiResponse(responseCode = "200", description = "Successfully retrieved a fin by id"),
+            @ApiResponse(responseCode = "404", description = "Not found - fin does not exist (ErrorResponse: error, message)"),
+            @ApiResponse(responseCode = "500", description = "Internal server error (ErrorResponse: error, message)")
     })
     @GetMapping("/fins/{id}")
     public ResponseEntity<FinsDtoResponse> getFinsById(@PathVariable Long id) {
@@ -66,10 +66,10 @@ public class FinsController {
 
     @Operation(summary = "Update a fin by id")
     @ApiResponses({
-        @ApiResponse(responseCode = "200", description = "Successfully updated a fin by id"),
-        @ApiResponse(responseCode = "400", description = "Bad request - validation failed (ErrorResponse: error, message)"),
-        @ApiResponse(responseCode = "404", description = "Not found - fin does not exist (ErrorResponse: error, message)"),
-        @ApiResponse(responseCode = "500", description = "Internal server error (ErrorResponse: error, message)")
+            @ApiResponse(responseCode = "200", description = "Successfully updated a fin by id"),
+            @ApiResponse(responseCode = "400", description = "Bad request - validation failed (ErrorResponse: error, message)"),
+            @ApiResponse(responseCode = "404", description = "Not found - fin does not exist (ErrorResponse: error, message)"),
+            @ApiResponse(responseCode = "500", description = "Internal server error (ErrorResponse: error, message)")
     })
     @PutMapping("/fins/{id}")
     public ResponseEntity<FinsDtoResponse> updateFins(@PathVariable Long id, @RequestBody @Valid FinsDtoRequest finsDto) {
@@ -78,8 +78,8 @@ public class FinsController {
 
     @Operation(summary = "Delete a fin by id")
     @ApiResponses({
-        @ApiResponse(responseCode = "200", description = "Successfully deleted a fin by id"),
-        @ApiResponse(responseCode = "500", description = "Internal server error (ErrorResponse: error, message)")
+            @ApiResponse(responseCode = "200", description = "Successfully deleted a fin by id"),
+            @ApiResponse(responseCode = "500", description = "Internal server error (ErrorResponse: error, message)")
     })
     @DeleteMapping("/fins/{id}")
     public ResponseEntity<Void> deleteFins(@PathVariable Long id) {

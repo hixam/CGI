@@ -63,8 +63,8 @@ class GlassesServiceImplTest {
             List<GlassesDtoResponse> result = glassesService.getAllGlasses();
 
             assertThat(result).hasSize(1);
-            assertThat(result.get(0).getId()).isEqualTo(EXISTING_ID);
-            assertThat(result.get(0).getBrandName()).isEqualTo(BRAND_NAME_TEST);
+            assertThat(result.getFirst().getId()).isEqualTo(EXISTING_ID);
+            assertThat(result.getFirst().getBrandName()).isEqualTo(BRAND_NAME_TEST);
         }
     }
 
